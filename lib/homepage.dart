@@ -33,7 +33,7 @@ class TextBox extends StatelessWidget {
       child: TextField(
         cursorHeight: 20,
         decoration: InputDecoration(
-          hintText: 'Search Delegate',
+          hintText: 'Click me',
           hintStyle: TextStyle(
               color: Colors.white, fontSize: 21, fontWeight: FontWeight.w500),
           border: InputBorder.none,

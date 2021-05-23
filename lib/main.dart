@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+import 'colorCodes.dart';
 import 'homepage.dart';
 void main() {
 runApp(MyApp());
@@ -9,15 +10,16 @@ runApp(MyApp());
 class MyApp extends StatelessWidget {
 @override
 Widget build(BuildContext context) {
-	return MaterialApp(
-	title: 'Splash Screen',
-	theme: ThemeData(
-		//primarySwatch: Colors.black,
-    primaryColor: Colors.black,
-    fontFamily: 'KoHo'
-	),
-	home: MyHomePage(),
-	debugShowCheckedModeBanner: false,
+    return MaterialApp(
+    title: 'Light/Dark Theme',
+    // theme:ThemeData(
+    //   fontFamily: 'KoHo',
+    //   primaryColor: Colors.black,
+    // ),
+    theme: lightThemeData(context),
+    darkTheme: darkThemeData(context),
+    home: MyHomePage(),
+    debugShowCheckedModeBanner: false,
 	);
 }
 }
