@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:splash_screen_trial/collapsingToolbar.dart';
 
+import 'date-time.dart';
+
 class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,26 @@ class SecondScreen extends StatelessWidget {
         title: TextBox(),
       ),
       body: Center(
-          child: Text(
-        "Implementing seach delegate property!! \n\n  😛 😝 😜 🤪 🤨",
-      )),
+          child: Column(
+            children: [
+              Text(
+            "Implementing seach delegate property!! \n\n  😛 😝 😜 🤪 🤨",
+          ),
+          SizedBox(height: 10,),
+          RawMaterialButton(
+            
+            fillColor: Colors.yellow,
+            onPressed: (){
+              Navigator.push(context,
+              MaterialPageRoute(builder: (context) => DatePickerDemo()));
+            }, 
+            child: Text('DateTimePicker Page'),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5)
+            ),
+            )
+            ],
+          )),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.teal[700],
         onPressed: () {
